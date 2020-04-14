@@ -15,6 +15,13 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'LucidaGrande';
+	src: url('../fonts/Lucida Grande[1].eot');
+	src: local('☺'), url('../fonts/Lucida Grande[1].woff') format('woff'), url('../fonts/Lucida Grande[1].ttf') format('truetype'), url('../fonts/Lucida Grande[1].svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
 //Шрифты
 //Шаблоны
@@ -33,18 +40,19 @@ body {
   overflow-x: hidden;
   font-family: Helvetica, Arial, sans-serif;
   background-color: #fff;
+  min-height: 120vh;
 }
 .top {
-  border: 1px solid #000;
+  border: 1px solid transparent;
   position: relative;
   z-index: 5;                   //  <-- 5!
-  height: 640px;
+  height: 100vh;
   background: url(../src/bg_top.jpg) 0 0/101% auto no-repeat;
 }
 .container {
   max-width: 840px;
   margin: 0 auto;
-  height: 77%;
+  height: 85%;
 }
 .flex {
   display: flex;
@@ -53,10 +61,14 @@ body {
   height: 100%;
 }
 .flex__left {
-  border: 1px solid rgb(255, 255, 255);
-  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid transparent;
+  flex: 1 1 49%;
 }
-.logo {
+.top__logo {
   font-family: 'SFCompact';
   font-size: 29.2px;
   line-height: 22px;
@@ -65,11 +77,117 @@ body {
   color: #ffffff;
   margin-left: 0.2%;
 }
-.flex__right {
-  border: 1px solid rgb(255, 68, 68);
-  flex: 1 1 50%;
+.top__promo {
+  margin-top: 6.8%;
+  font-family: 'MyriadPro';
+  font-size: 29px;
+  line-height: 29px;
+  font-weight: 400;
+  color: #ffffff;
+  padding-left: 73px;
+  margin: 22% 0 5.6% 0;
+  background: url(../src/icon_search.png)0 center/auto 90% no-repeat;
+  span {
+    font-weight: 600;
+    font-size: 30px;
+  }
+}
+.top__text {
+  font-family: 'Helvetica';
+  font-size: 14.6px;
+  line-height: 22px;
+  color: #ffffff;
+}
+.top__appstore {
+  width: 197px;
+  height: 44px;
+  background: url(../src/applebgbtn.png) 0 0/100% auto no-repeat;
+  margin: 3% 0 7% 0;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 197px;
+    height: 44px;
+    background: url(../src/apple_logo.png) 33px 33%/13.5% auto no-repeat;
+    p {
+      font-family: 'LucidaGrande';
+      font-size: 9.7px;
+      line-height: 10px;
+      font-weight: 300;
+      letter-spacing: -0.035em;
+      color: #ffffff;
+      padding-left: 75.5px;
+    }
+    p:last-child {
+      font-size: 16.9px;
+      line-height: 15px;
+      letter-spacing: -0.035em;
+    }
+  }
+}
+.top__sign {
+  font-family: MyriadPro;
+  font-size: 14.6px;
+  line-height: 24px;
+  font-weight: 200;
+  color: #ffffff;
+  padding: 4% 0 1.7% 0;
+}
+.top__signup {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
+.top__input {
+  width: 269px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  padding-left: 10px;
+}
+.top__notify {
+  display: inline-block;
+  width: 123px;
+  height: 43px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  font-family: 'MyriadPro';
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #3cd072;
+}
+.flex__right {
+  border: 1px solid transparent;
+  flex: 1 1 50%;
+  position: relative;
+}
+.iphone_b {
+  position: absolute;
+  width: 58.5%;
+  left: 83px;
+  top: 19px;
+  z-index: 6;
+  transition: all 800ms ease 0s;
+  &:hover {
+    transform: translate(-30px,-20px) scale(1.05);
+    z-index: 8;
+  }
+}
+.iphone_w {
+  position: absolute;
+  width: 59.5%;
+  left: 195.5px;
+  top: 58px;
+  z-index: 7;
+  transition: all 800ms ease 0s;
+  &:hover {
+    transform: scale(1.05);
+    z-index: 8;
+  }
+}
 
 
 
