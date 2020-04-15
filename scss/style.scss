@@ -253,7 +253,6 @@ body {
   position: relative;
   z-index: 6;                   //  <-- 6!
   height: 744px;
-  background-color: none;
   background: url(../src/easy_bg.jpg)0 0/101.1% auto no-repeat;
 }
 .easy__container {
@@ -267,7 +266,7 @@ body {
   align-items: center;
   img {
     width: 66px;
-    margin: 42px 0 20px 13px;
+    margin: 43px 0 20px 13px;
   }
   p {
     font-family: 'MyriadPro';
@@ -307,50 +306,96 @@ body {
     padding: 20px 8px 0 20px;
   }
 }
-
-
-
-/*.cross {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
+.get {
+  height: 392px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    color: #fff;
+    font-family: 'MyriadPro';
+    font-size: 23px;
+    line-height: 32px;
+    font-weight: 400;
+    margin-left: 14px;
+    &:first-child {
+      margin-top: 64px;
+    }
+  }
+  .get__green {
+    font-size: 34px;
+    font-weight: 400;
+    color: #3cd072;
+    line-height: 48px;
+    margin-bottom: 40px;
+  }
+}
+                      // Slider
+.get__slider {
+  position: relative;
+  height: 121px;
   width: 100vw;
-  background-color: rgba(119, 58, 189, 0.233);
+  display: flex;
+  flex-direction: row;
+}
+.slider-container {
+  text-align: center; // Для выравнивания слайда
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 6px;
+  img {
+    height: 120px;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+}
+.business {
+  height: 634px;
+  background: url(../src/bg_business.jpg)0 0/101.1% auto no-repeat;
+}
+.business__container {
+  width: 840px;
+  margin: 0 auto;
+  height: 100%;
+  padding-top: 63px;
+}
+.business__header {
+  font-family: 'MyriadPro';
+  font-size: 34px;
+  line-height: 72px;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 0 0 0 90px;
+  background: url(../src/icon_case.png)0 center/auto 90% no-repeat;
+}
+.business__text {
+  width: 450px;
+  font-family: 'Helvetica';
+  font-size: 14.9px;
+  line-height: 22px;
+  font-weight: 400;
+  padding: 12px 0 0 0;
+}
+.business__list {
+  width: 380px;
+  padding: 26px 0 0 1px;
+}
+.business__list__li {
   display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: 100;
+  justify-content: flex-start;
+  font-family: 'MyriadPro';
+  font-size: 22.5px;
+  height: 57px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 0 0 0 74px;
+  margin: 0 0 8px 0;
+  background: url(../src/icon_birdie.png)0 center/auto 51px no-repeat;
 }
-.cross__link {
-  position: absolute;
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  background-color: rgba(60, 255, 118, 0.329);
-  transform: translate(-50%, -50%);
+.li__third {
+  margin: 30px 0 30px 0;
 }
-.cross__vert {
-  display: inline-block;
-  position: absolute;
-  width: 5px;
-  height: 100px;
-  top: 50%;
-  left: 50%;
-  background-color: rgba(255, 236, 67, 0.637);
-  transform: translate(-50%, -50%);
-}
-.cross__hor {
-  display: inline-block;
-  position: absolute;
-  width: 100px;
-  height: 5px;
-  top: 50%;
-  left: 50%;
-  background-color: rgba(255, 236, 67, 0.637);
-  transform: translate(-50%, -50%);
-}*/
