@@ -96,6 +96,22 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/HelveticaNeueCyr-Medium.eot");
+  src: local("☺"), url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Medium.ttf") format("truetype"), url("../fonts/HelveticaNeueCyr-Medium.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueThin';
+  src: url("fonts/HelveticaNeueCyr-Thin.eot");
+  src: local("☺"), url("fonts/HelveticaNeueCyr-Thin.woff") format("woff"), url("fonts/HelveticaNeueCyr-Thin.ttf") format("truetype"), url("fonts/HelveticaNeueCyr-Thin.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*  media
 @media (min-width: 1220px) {}
 @media (max-width: 1000px) {}
@@ -768,7 +784,6 @@ body {
   margin: 0 auto;
   height: 828px;
   padding: 123px 0 0 12px;
-  border: 1px solid #d41a42;
 }
 
 .users__header {
@@ -784,23 +799,276 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   height: 131px;
   width: 100%;
   border-top: 1px solid #adadad;
-  padding: 0 0 0 2.5px;
+}
+
+.users__element:last-child {
+  border-bottom: 1px solid #adadad;
+}
+
+.users__face {
+  -webkit-transition: all 800ms ease 0s;
+  transition: all 800ms ease 0s;
+  padding: 21.5px 0 0 2.5px;
 }
 
 .users__face img {
   width: 87px;
 }
 
+.users__face:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .users__icon {
   margin-left: 21px;
+  padding-top: 21.5px;
 }
 
 .users__icon img {
   width: 87px;
+}
+
+.users__summary {
+  height: 100%;
+  width: 275px;
+  padding: 17.1px 0 0 20px;
+}
+
+.users__name {
+  font-family: 'MyriadPro';
+  font-size: 30.2px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #3cd072;
+  padding: 0 0 3px 0;
+}
+
+.users__country {
+  font-family: 'Helvetica';
+  font-size: 21px;
+  line-height: 32px;
+  font-weight: 300;
+  color: #000000;
+  margin-top: 1px;
+}
+
+.users__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 28px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.users__stars {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 2px;
+}
+
+.users__stars li {
+  display: inline-block;
+}
+
+.users__stars li img {
+  width: 23px;
+}
+
+.users__reviews {
+  display: inline-block;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: flex-start;
+  font-family: 'Helvetica';
+  font-size: 14.2px;
+  line-height: 15px;
+  font-weight: 300;
+  color: #b3b3b3;
+  padding: 0 0 1px 11px;
+}
+
+.users__counter {
+  padding: 16.5px 0 0 37px;
+}
+
+.users__counter p {
+  font-family: 'Helvetica';
+  font-size: 21.5px;
+  line-height: 32px;
+  font-weight: 300;
+  color: #000000;
+}
+
+.users__watts {
+  font-family: 'Helvetica';
+  font-size: 64px;
+  line-height: 48px;
+  font-weight: 100;
+  color: #000;
+  padding: 14px 0 0 50px;
+  background: url(../src/icon_watt.png) 0 bottom/auto 43px no-repeat;
+}
+
+.signup__bottom {
+  background-color: #000;
+}
+
+.signup__bottom_text {
+  color: #3cd072;
+}
+
+.signup__bottom_notify {
+  background-color: #3cd072;
+  color: #fff;
+}
+
+.contact {
+  height: 568px;
+  background: url(../src/contact_form.jpg) 0 0/101% auto no-repeat;
+}
+
+.contact__container {
+  margin: 0 auto;
+  max-width: 840px;
+  height: 100%;
+  padding: 83px 0 0 0;
+}
+
+.contact__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__header {
+  font-family: 'MyriadPro';
+  font-size: 33.5px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.contact__name {
+  height: 44px;
+  width: 415px;
+  padding: 0 20px;
+  margin: 15px 0 22px 0;
+}
+
+.contact__mail {
+  height: 43.5px;
+  width: 415px;
+  padding: 0 20px;
+  margin: 0px 0 22px 0;
+}
+
+.contact__message {
+  margin: 0px 0 22px 0;
+  height: 174px;
+  width: 415px;
+  padding: 0 20px;
+}
+
+.contact__button {
+  font-family: 'MyriadPro';
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #3cd072;
+  padding: 10px 82px 10px 83px;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.contact__social {
+  margin: 0 0 0 95px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__social__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-family: 'MyriadPro';
+  font-size: 22.5px;
+  height: 57px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 0 0 0 60.5px;
+  margin: 9px 0 0 0;
+  background: url(../src/social_FB.png) 0 center/auto 43.5px no-repeat;
+}
+
+.contact__social_2 {
+  background: url(../src/social_Tw.png) 0 center/auto 43.5px no-repeat;
+}
+
+.contact__social_3 {
+  background: url(../src/social_Vk.png) 0 center/auto 43.5px no-repeat;
+}
+
+footer {
+  background-color: #fff;
+}
+
+.footer__container {
+  max-width: 860px;
+  margin: 0 auto;
+  height: 150px;
+}
+
+.footer__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.footer__flex p {
+  font-family: 'MyriadPro';
+  font-size: 14.5px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #909090;
 }
