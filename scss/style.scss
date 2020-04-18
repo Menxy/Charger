@@ -31,7 +31,7 @@
 }
 //Шаблоны
 /*  media
-@media (min-width: 1220px) {}
+@media (max-width: 1220px) {}
 @media (max-width: 1000px) {}
 @media (max-width: 768px) {}
 @media (max-width: 620px) {}
@@ -48,21 +48,34 @@ body {
   position: relative;
 }
 .top {
+  border: 1px solid #000;
   position: relative;
   z-index: 5;                   //  <-- 5!
-  height: 100vh;
+  height: 567px;
   background: url(../src/bg_top.jpg) 0 0/101% auto no-repeat fixed;
+  @media (max-width: 1150px) {
+    background-position: center 0;
+    background-size: cover;
+  }
 }
 .container {
+  border: 1px solid rgb(221, 52, 52);
   max-width: 840px;
   margin: 0 auto;
   height: 85%;
+  @media (max-width: 1150px) {
+    max-width: 85%;
+    height: 95%;
+  }
 }
 .flex {
   display: flex;
   justify-content: space-between;
   padding: 6.5% 0 0 0;
   height: 100%;
+  @media (max-width: 1150px) {
+    padding: 3.5% 0 0 0;
+  }
 }
 .flex__left {
   display: flex;
@@ -91,9 +104,15 @@ body {
   padding-left: 73px;
   margin: 22% 0 5.6% 0;
   background: url(../src/icon_search.png)0 center/auto 90% no-repeat;
+  @media (max-width: 430px) {
+    padding-left: 90px;
+  }
   span {
     font-weight: 600;
     font-size: 30px;
+    @media (min-width: 430px) {
+      white-space: nowrap;
+    }
   }
 }
 .top__text {
@@ -143,12 +162,18 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .top__input {
   width: 269px;
+  height: 43px;
   background-color: transparent;
   border: 1px solid #ffffff;
   padding-left: 10px;
+  margin-bottom: 2%;;
 }
 .top__notify {
   display: inline-block;
@@ -166,6 +191,9 @@ body {
   border: 1px solid transparent;
   flex: 1 1 50%;
   position: relative;
+  @media (max-width: 630px) {
+    display: none;
+  }
 }
 .iphone_b {
   position: absolute;
@@ -175,8 +203,22 @@ body {
   z-index: 6;
   transition: all 800ms ease 0s;
   &:hover {
-    transform: translate(-10px,-15px) scale(1.05);
+    transform: translate(-10px,-10px) scale(1.05);
     z-index: 8;
+  }
+  @media (max-width: 1150px) {
+    left: 30px;
+    top: 5px;
+  }
+  @media (max-width: 1024px) {
+    width: max-content;
+    max-width: 65%;
+    left: auto;
+    right: -20px;
+    z-index: 9;
+  }
+  @media (max-width: 768px) {
+    max-width: 75%;
   }
 }
 .iphone_w {
@@ -189,6 +231,16 @@ body {
   &:hover {
     transform: scale(1.05);
     z-index: 8;
+  }
+  @media (max-width: 1024px) {
+    width: max-content;
+    max-width: 65%;
+    left: 20px;
+    top: auto;
+    bottom: -60px;
+  }
+  @media (max-width: 768px) {
+    max-width: 75%;
   }
 }
 .diag {
