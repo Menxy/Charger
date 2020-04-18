@@ -48,7 +48,6 @@ body {
   position: relative;
 }
 .top {
-  border: 1px solid #000;
   position: relative;
   z-index: 5;                   //  <-- 5!
   height: 567px;
@@ -59,7 +58,6 @@ body {
   }
 }
 .container {
-  border: 1px solid rgb(221, 52, 52);
   max-width: 840px;
   margin: 0 auto;
   height: 85%;
@@ -271,9 +269,21 @@ body {
   top: -161px;
   z-index: 4;                   //  <-- 4!
   transition: all 500ms ease 0s;
+  @media (max-width: 768px) {
+    top: auto;
+    bottom: 10%;
+    left: auto;
+    right: 5%;
+  }
+  @media (max-width: 430px) {
+    display: none;
+  }
   &:last-child {
     left: -69px;
     top: 29px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   &:hover {
     transform: scale(0.85);
@@ -284,8 +294,14 @@ body {
   flex: 1 1 29%;
   margin-top: 2px;
 }
+.diag__item {
+  @media (max-width: 1024px) {
+    padding-right: 10%;
+  }
+}
 .diag__item__head {
   font-family: 'MyriadPro';
+  white-space: nowrap;
   font-size: 22.5px;
   line-height: 32px;
   font-weight: 500;
