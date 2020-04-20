@@ -244,13 +244,14 @@ body {
 .diag {
   position: relative;
   z-index: 4;                   //  <-- 5!
-  height: 441px;
+  height: 567px;
   background-color: #f0f0f0;
 }
 .diag__container {
   max-width: 870px;
   margin: 0 auto;
   height: 100%;
+  padding: 1.1% 0 0 0;
 }
 .diag__flex {
   border: 1px solid transparent;
@@ -261,6 +262,9 @@ body {
 .diag__left {
   position: relative;
   flex: 1 1 50%;
+  @media (max-width: 430px) {
+    display: none;
+  }
 }
 .diag__img {
   position: absolute;
@@ -293,6 +297,10 @@ body {
 .diag__right {
   flex: 1 1 29%;
   margin-top: 2px;
+  @media (max-width: 430px) {
+    width: 80%;
+    padding-left: 10%;
+  }
 }
 .diag__item {
   @media (max-width: 1024px) {
@@ -324,12 +332,21 @@ body {
   position: relative;
   z-index: 6;                   //  <-- 6!
   height: 744px;
-  background: url(../src/easy_bg.jpg)0 0/101.1% auto no-repeat;
+  background: url(../src/easy_bg.jpg)center 0/cover no-repeat;
+  
+  @media (max-width: 1024px) {
+    background: none;
+    background-color: #fff;
+    height: 600px;
+  }
 }
 .easy__container {
   width: 875px;
   margin: 0 auto;
   height: 100%;
+  @media (max-width: 1024px) {
+    width: 95%;
+  }
 }
 .easy__top {
   display: flex;
@@ -357,12 +374,19 @@ body {
 .easy__bottom {
   display: flex;
   margin: 38px 0 0 0;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 }
 .easy__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1 1 30%;
+  @media (max-width: 1024px) {
+    flex-direction: row;
+    padding: 2% 15% 2% 15%;
+  }
   img {
     width: 52px;
     margin-left: 11px;
@@ -375,6 +399,10 @@ body {
     font-weight: 600;
     text-align: center;
     padding: 20px 8px 0 20px;
+    @media (max-width: 1024px) {
+      padding: 0 0 0 3%;
+      text-align: left;
+    }
   }
 }
 .get {
@@ -409,8 +437,9 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
-.slider-container {
+.slider-img {
   text-align: center; // Для выравнивания слайда
   display: flex;
   justify-content: space-between;
@@ -424,14 +453,26 @@ body {
   }
 }
 .business {
-  height: 634px;
+  height: 632px;
   background: url(../src/bg_business.jpg)0 0/101.1% auto no-repeat fixed;
+  @media (max-width: 1250px) {
+    background: url(../src/bg_business.jpg)center 0/cover no-repeat fixed;
+  }
+  @media (max-width: 768px) {
+    background: url(../src/bg_business.jpg)left 0/cover no-repeat fixed;
+  }
 }
 .business__container {
   width: 840px;
   margin: 0 auto;
   height: 100%;
   padding-top: 63px;
+  @media (max-width: 1024px) {
+    max-width: 85%;
+  }
+  @media (max-width: 430px) {
+    padding-top: 23px;
+  }
 }
 .business__header {
   font-family: 'MyriadPro';
@@ -441,6 +482,15 @@ body {
   color: #ffffff;
   padding: 0 0 0 90px;
   background: url(../src/icon_case.png)0 center/auto 90% no-repeat;
+  @media (max-width: 768px) {
+    font-size: 30px;
+    line-height: 62px;
+    padding: 0 0 0 70px;
+    white-space: nowrap;
+  }
+  @media (max-width: 430px) {
+    font-size: 26px;
+  }
 }
 .business__text {
   width: 450px;
@@ -449,10 +499,16 @@ body {
   line-height: 22px;
   font-weight: 400;
   padding: 12px 0 0 0;
+  @media (max-width: 768px) {
+    width: 85%;
+  }
 }
 .business__list {
   width: 380px;
   padding: 26px 0 0 1px;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 }
 .business__list__li {
   display: flex;
@@ -465,12 +521,22 @@ body {
   padding: 0 0 0 74px;
   margin: 0 0 8px 0;
   background: url(../src/icon_birdie.png)0 center/auto 51px no-repeat;
+  @media (max-width: 768px) {
+    padding: 0 0 0 74px;
+  }
+  @media (max-width: 630px) {
+    font-size: 20px;
+  }
 }
 .li__third {
   margin: 30px 0 30px 0;
+  
 }
 .li__end {
   align-items: flex-end;
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 }
 .signup {
   height: 174px;
@@ -484,33 +550,46 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding: 0 0 0 14px;
+  @media (max-width: 1024px) {
+    padding: 0 0 0 10%;
+    width: 90%;
+  }
 }
 .signup__middle {
   font-family: 'MyriadPro';
   font-size: 22.7px;
   line-height: 24px;
   font-weight: 600;
-  padding: 0 0 18px 0;
+  padding: 11px 0 18px 0;
 }
 .signup__middle__form {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .signup__middle__input {
   height: 43px;
-  width: 633px;
+  width: 74.3%;
   border: 2px solid #3cd072;
   padding: 0 20px;
+  margin-bottom: 1%;
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
 }
 .signup__middle__notify {
   font-family: 'MyriadPro';
-  min-width: fit-content;
+  width: 197px;
+  height: 43px;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
   color: #3cd072;
-  padding: 10px 67px 10px 68px;
+  padding: 11px 67px 10px 68px;
   background-color: #000;
   border-radius: 4px;
 }
@@ -521,6 +600,9 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #fff;
+  @media (max-width: 1024px) {
+    height: min-content;
+  }
 }
 .watts__logo {
   width: 65px;
@@ -542,7 +624,7 @@ body {
   margin: 9px 0 0 10px;
 }
 .watts__text {
-  width: 600px;
+  max-width: 50%;
   margin: 35px 0 50px 13px;
   text-align: center;
   font-family: 'Helvetica';
@@ -550,6 +632,9 @@ body {
   line-height: 22px;
   font-weight: 400;
   color: #000000;
+  @media (max-width: 1024px) {
+    max-width: 80%;
+  }
 }
 .watts__img {
   width: 100%;
@@ -582,6 +667,14 @@ body {
   margin: 0 auto;
   height: 828px;
   padding: 123px 0 0 12px;
+  @media (max-width: 1024px) {
+    padding: 70px 0 0 12px;
+    width: 90%;
+  }
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 53px 0 0 0;
+  }
 }
 .users__header {
   font-family: 'MyriadPro';
@@ -589,7 +682,14 @@ body {
   line-height: 32px;
   font-weight: 600;
   color: #3cd072;
-  margin-bottom: 15.5px;
+  margin: 0 0 15.5px 0;
+  @media (max-width: 1024px) {
+    font-size: 34px;
+    padding-left: 5%;
+  }
+  @media (max-width: 630px) {
+    font-size: 24px;
+  }
 }
 .users__element {
   display: flex;
@@ -599,6 +699,10 @@ body {
   border-top: 1px solid #adadad;
   &:last-child {
     border-bottom: 1px solid #adadad;
+  }
+  @media (max-width: 768px) {
+    padding: 0 0 0 3%;
+    justify-content: space-around;
   }
 }
 .users__face {
@@ -617,11 +721,17 @@ body {
     width: 87px;
   }
   padding-top: 21.5px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .users__summary {
   height: 100%;
   width: 275px;
   padding: 17.1px 0 0 20px;
+  @media (max-width: 768px) {
+    width: unset;
+  }
 }
 .users__name {
   font-family: 'MyriadPro';
@@ -630,6 +740,13 @@ body {
   font-weight: 600;
   color: #3cd072;
   padding: 0 0 3px 0;
+  white-space: nowrap;
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
+  @media (max-width: 630px) {
+    font-size: 18px;
+  }
 }
 .users__country {
   font-family: 'Helvetica';
@@ -638,6 +755,12 @@ body {
   font-weight: 300;
   color: #000000;
   margin-top: 1px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+  @media (max-width: 630px) {
+    font-size: 12px;
+  }
 }
 .users__rating {
   display: flex;
@@ -651,6 +774,9 @@ body {
     display: inline-block;
     img {
       width: 23px;
+      @media (max-width: 768px) {
+        width: 18px;
+      }
     }
   }
 }
@@ -664,15 +790,24 @@ body {
   font-weight: 300;
   color: #b3b3b3;
   padding: 0 0 1px 11px;
+  @media (max-width: 630px) {
+    display: none;
+  }
 }
 .users__counter {
   padding: 16.5px 0 0 37px;
+  @media (max-width: 630px) {
+    padding: 16.5px 0 0 5px;
+  }
   p {
     font-family: 'Helvetica';
     font-size: 21.5px;
     line-height: 32px;
     font-weight: 300;
     color: #000000;
+    @media (max-width: 630px) {
+      font-size: 16px;
+    }
   }
 }
 .users__watts {
@@ -683,6 +818,16 @@ body {
   color: #000;
   padding: 14px 0 0 50px;
   background: url(../src/icon_watt.png)0 bottom/auto 43px no-repeat;
+  @media (max-width: 1024px) {
+    font-size: 24px;
+  }
+  @media (max-width: 630px) {
+    font-size: 16px;
+    background: none;
+    line-height: 36px;
+    padding: 0;
+    font-weight: 600;
+  }
 }
 .signup__bottom {
   background-color: #000;
@@ -697,19 +842,32 @@ body {
 .contact {
   height: 568px;
   background: url(../src/contact_form.jpg) 0 0/101% auto no-repeat fixed;
+  @media (max-width: 1250px) {
+    background-position: center 0;
+    background-size: cover;  
+  }
 }
 .contact__container {
   margin: 0 auto;
   max-width: 840px;
   height: 100%;
   padding: 83px 0 0 0;
+  @media (max-width: 1024px) {
+    max-width: 90%;
+  }
 }
 .contact__flex {
   display: flex;
+  @media (max-width: 768px) {
+    justify-content: space-between;
+  }
 }
 .contact__form {
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    flex: 1 1 65%;
+  }
 }
 .contact__header {
   font-family: 'MyriadPro';
@@ -717,24 +875,37 @@ body {
   line-height: 32px;
   font-weight: 600;
   color: #000000;
+  white-space: nowrap;
+  @media (max-width: 530px) {
+    font-size: 27px;
+  }
 }
 .contact__name {
   height: 44px;
   width: 415px;
   padding: 0 20px;
   margin: 15px 0 22px 0;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 .contact__mail {
   height: 43.5px;
   width: 415px;
   padding: 0 20px;
   margin: 0px 0 22px 0;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 .contact__message {
   margin: 0px 0 22px 0;
   height: 174px;
   width: 415px;
   padding: 0 20px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 .contact__button {
   font-family: 'MyriadPro';
@@ -751,6 +922,9 @@ body {
   margin: 0 0 0 95px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    margin: 0 0 0 5%;
+  }
 }
 .contact__social__btn {
   display: flex;
@@ -764,6 +938,9 @@ body {
   padding: 0 0 0 60.5px;
   margin: 9px 0 0 0;
   background: url(../src/social_FB.png)0 center/auto 43.5px no-repeat;
+  @media (max-width: 530px) {
+    font-size: 18px;
+  }
 }
 .contact__social_2 {
   background: url(../src/social_Tw.png)0 center/auto 43.5px no-repeat;
