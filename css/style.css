@@ -105,11 +105,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*  media
-@media (max-width: 1220px) {}
 @media (max-width: 1000px) {}
-@media (max-width: 768px) {}
-@media (max-width: 620px) {}
-@media (max-width: 550px) {}
+@media (min-width: 1000px) {}
     */
 body {
   overflow-x: hidden;
@@ -1443,7 +1440,7 @@ body {
   margin: 0px 0 22px 0;
   height: 174px;
   width: 415px;
-  padding: 0 20px;
+  padding: 20px 20px;
 }
 
 @media (max-width: 768px) {

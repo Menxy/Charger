@@ -31,15 +31,9 @@
 }
 //Шаблоны
 /*  media
-@media (max-width: 1220px) {}
 @media (max-width: 1000px) {}
-@media (max-width: 768px) {}
-@media (max-width: 620px) {}
-@media (max-width: 550px) {}
+@media (min-width: 1000px) {}
     */
-%white {
-  border: 1px solid #fff;
-}
 body {
   overflow-x: hidden;
   font-family: Helvetica, Arial, sans-serif;
@@ -908,7 +902,7 @@ body {
   margin: 0px 0 22px 0;
   height: 174px;
   width: 415px;
-  padding: 0 20px;
+  padding: 20px 20px;
   @media (max-width: 768px) {
     width: 100%;
   }
