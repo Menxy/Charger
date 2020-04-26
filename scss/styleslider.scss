@@ -1,0 +1,103 @@
+@import "_nullstyle";
+// Шрифты
+//@import url(https://fonts.googleapis.com/css?family=Federant:regular);
+@font-face {
+	font-family: 'SFCompact';
+	src: url('../fonts/SF-Compact-Text-Regular.eot');
+	src: local('☺'), url('../fonts/SF-Compact-Text-Regular.woff') format('woff'), url('../fonts/SF-Compact-Text-Regular.ttf') format('truetype'), url('../fonts/SF-Compact-Text-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('../fonts/MyriadPro-Regular.eot');
+	src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'LucidaGrande';
+	src: url('../fonts/Lucida Grande[1].eot');
+	src: local('☺'), url('../fonts/Lucida Grande[1].woff') format('woff'), url('../fonts/Lucida Grande[1].ttf') format('truetype'), url('../fonts/Lucida Grande[1].svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'HelveticaNeue';
+	src: url('../fonts/HelveticaNeueCyr-Medium.eot');
+	src: local('☺'), url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Medium.ttf') format('truetype'), url('../fonts/HelveticaNeueCyr-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+//Шаблоны
+/*  media
+@media (max-width: 1000px) {}
+@media (min-width: 1000px) {}
+    */                      // Slider
+.get__slider {
+  // position: relative;
+  // min-height: 121px;
+  // min-width: 0;
+  display: flex;
+  max-height: 100%;
+  // justify-content: center;
+}
+.slider-img {
+  // text-align: center; // Для выравнивания слайда
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  // margin-left: 6px;
+  // img {
+  //   height: 120px;
+  //   &:hover{
+  //     transform: scale(1.1);
+  //   }
+  }
+  /* Слайдер */
+.slick-slider{
+  // min-width: 0;
+  margin-top: 50px;
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {}
+/* Лента слайдов */
+.slick-track{
+  // display: flex;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{
+
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{
+  position: absolute;
+  right: 0;
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+

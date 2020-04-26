@@ -44,7 +44,7 @@ body {
 .top {
   position: relative;
   z-index: 5;                   //  <-- 5!
-  height: 567px;
+  min-height: 567px;
   background: url(../src/bg_top.jpg) 0 0/101% auto no-repeat fixed;
   @media (max-width: 1150px) {
     background-position: center 0;
@@ -95,9 +95,15 @@ body {
   color: #ffffff;
   padding-left: 73px;
   margin: 22% 0 5.6% 0;
+  white-space: nowrap;
   background: url(../src/icon_search.png)0 center/auto 90% no-repeat;
+  @media (max-width: 768px) {
+    padding-left: 53px;
+    background: url(../src/icon_search.png)0 center/auto 60% no-repeat;
+  }
   @media (max-width: 430px) {
-    padding-left: 90px;
+    padding-left: 0;
+    background: none;
   }
   span {
     font-weight: 600;
@@ -325,13 +331,16 @@ body {
 .easy {
   position: relative;
   z-index: 6;                   //  <-- 6!
-  height: 744px;
+  min-height: 744px;
   background: url(../src/easy_bg.jpg)center 0/cover no-repeat;
-  
   @media (max-width: 1024px) {
     background: none;
     background-color: #fff;
-    height: 600px;
+    height: fit-content;
+    min-height: none;
+  }
+  @media (min-width: 1450px) {
+    background: url(../src/easy_bg.jpg)center center/cover no-repeat;
   }
 }
 .easy__container {
@@ -400,8 +409,10 @@ body {
   }
 }
 .get {
-  height: 392px;
+  min-height: 392px;
   background-color: #000;
+}
+.get__top {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -427,32 +438,97 @@ body {
                       // Slider
 .get__slider {
   position: relative;
-  height: 121px;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  min-width: 0; // (Если он или родитель flex
+  padding: 0 40px 0 40px;
 }
 .slider-img {
-  text-align: center; // Для выравнивания слайда
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 6px;
-  img {
-    height: 120px;
-    &:hover{
-      transform: scale(1.1);
-    }
+  text-align: center; // Для выравнивания слайда по вертикали
+  opacity: 0.5;
+  margin: 0 5px;
   }
+  /* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {}
+/* Лента слайдов */
+.slick-track{
+  display: flex;
 }
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{
+}
+/* Слайд основной */
+.slick-slide.slick-current{
+}
+/* Слайд по центру */
+.slick-slide.slick-center{
+  opacity: 1;
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.get__slider .slick-arrow{
+  position: absolute;
+  top: 78%;
+  z-index: 100;
+  font-size: 0;
+  width: 50px;
+  height: 25px;
+  //transform: translate(0,-50%);
+}
+/* Стрелка влево */
+.get__slider .slick-arrow.slick-prev{
+  left: 0;
+  background: url(../src/slider/multi_arrow.png)center/cover no-repeat;
+  transform: scale(-1,1)
+}
+/* Стрелка вправо */
+.get__slider .slick-arrow.slick-next{
+  right: 0;
+  background: url(../src/slider/multi_arrow.png)center/cover no-repeat;
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{
+  display: none;
+}
+/* Точки (булиты) */
+.get__slider .slick-dots{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.get__slider .slick-dots li{
+  list-style: none;
+  margin: 25px 5px;
+}
+/* Элемент точки */
+.get__slider .slick-dots button{
+  font-size: 0;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+/* Активная точка */
+.get__slider .slick-dots li.slick-active button {
+  opacity: 1;
+}
+
+
 .business {
   height: 632px;
   background: url(../src/bg_business.jpg)0 0/101.1% auto no-repeat fixed;
   @media (max-width: 1250px) {
-    background: url(../src/bg_business.jpg)center 0/cover no-repeat fixed;
+    background: url(../src/bg_business.jpg)center 0/auto no-repeat fixed;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     background: url(../src/bg_business.jpg)left 0/cover no-repeat fixed;
   }
 }
@@ -588,7 +664,7 @@ body {
   border-radius: 4px;
 }
 .watts {
-  height: 940px;
+  min-height: 940px;
   border: 1px solid transparent;
   display: flex;
   flex-direction: column;
@@ -596,6 +672,7 @@ body {
   background-color: #fff;
   @media (max-width: 1024px) {
     height: min-content;
+    min-height: 200px;
   }
 }
 .watts__logo {
